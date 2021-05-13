@@ -2,7 +2,7 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
- */
+
 package com.mycompany.myapp.gui;
 
 import com.codename1.components.FloatingActionButton;
@@ -32,8 +32,8 @@ import com.codename1.ui.plaf.Style;
 import com.codename1.util.Base64;
 import com.mycompany.myapp.entities.User;
 
-import com.mycompany.myapp.entities.formation;
-import com.mycompany.myapp.services.ServiceFormation;
+import com.mycompany.myapp.entities.product;
+import com.mycompany.myapp.services.ServiceProduct;
 import com.mycompany.myapp.services.ServiceUser;
 import com.sendgrid.Response;
 import java.util.Map;
@@ -42,7 +42,7 @@ import java.util.Map;
 /**
  *
  * @author Meriem
- */
+ 
 public class RegisterForm extends Form {
     
      public RegisterForm(Form previous) {
@@ -99,3 +99,4 @@ public class RegisterForm extends Form {
     }
        
    
+*/
