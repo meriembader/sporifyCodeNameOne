@@ -2,7 +2,7 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
- */
+
 package com.mycompany.myapp.gui;
 
 import com.codename1.components.FloatingActionButton;
@@ -29,8 +29,8 @@ import com.codename1.ui.layouts.GridLayout;
 import com.codename1.ui.plaf.Style;
 import com.codename1.util.Base64;
 
-import com.mycompany.myapp.entities.formation;
-import com.mycompany.myapp.services.ServiceFormation;
+import com.mycompany.myapp.entities.product;
+import com.mycompany.myapp.services.ServiceProduct;
 import com.sendgrid.Response;
 import java.util.Map;
 
@@ -38,7 +38,7 @@ import java.util.Map;
 /**
  *
  * @author Meriem
- */
+ 
 public class AddBenevoleForm extends Form {
     
      public AddBenevoleForm(Form previous) {
@@ -77,7 +77,7 @@ public class AddBenevoleForm extends Form {
         btnValider.setUIID("LoginButton");
         
          /********************************************************** SMS **************************************/
-        
+      /*  
         btnValider.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent evt) {
@@ -108,8 +108,8 @@ public class AddBenevoleForm extends Form {
                 else
                 {
                     try {
-                     //   formation b= new formation( Integer.parseInt(tfCin.getText()), tfAddress.getText(), tfMail.getText(), Integer.parseInt(tfTelephone.getText()) , tfNiveau.getText(), tfGouvernorat.getText());
-                        if( ServiceFormation.getInstance().addBenevole(b))
+                     //   product b= new product( Integer.parseInt(tfCin.getText()), tfAddress.getText(), tfMail.getText(), Integer.parseInt(tfTelephone.getText()) , tfNiveau.getText(), tfGouvernorat.getText());
+                        if( ServiceProduct.getInstance().addBenevole(b))
                             Dialog.show("Success","Connection accepted",new Command("OK"));
                         else
                             Dialog.show("ERROR", "Server error", new Command("OK"));
@@ -127,4 +127,4 @@ public class AddBenevoleForm extends Form {
         getToolbar().addMaterialCommandToLeftBar("", FontImage.MATERIAL_ARROW_BACK, e-> previous.showBack());
                 
     }    
-}
+}*/

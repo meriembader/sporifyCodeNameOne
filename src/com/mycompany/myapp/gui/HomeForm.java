@@ -40,7 +40,7 @@ Form current;
         btnListTasks.addActionListener(e-> new ListTasksForm(current).show());
         addAll(btnLoginTask,btnRegisterTask,btnAddTask,btnListTasks);
          //btnAddBenevole.addActionListener(e-> new AddBenevoleForm(current).show());
-        btnListFormation.addActionListener(e-> new ListFormationForm(current).show());
+        btnListFormation.addActionListener(e-> new ListProductForm(current).show());
        // addAll(btnAddBenevole,btnListBenevole,btnPDF,btnxls);
            
     }

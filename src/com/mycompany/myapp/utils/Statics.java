@@ -10,6 +10,6 @@ package com.mycompany.myapp.utils;
  * @author bhk
  */
 public class Statics {
-    public static final String BASE_URL="http://localhost/Bras_Fort/web/app_dev.php";
+    public static final String BASE_URL="http://127.0.0.1:8000";
     
 }
