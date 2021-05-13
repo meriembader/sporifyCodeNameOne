@@ -71,17 +71,14 @@ public class ServiceProduct {
             List<Map<String,Object>> list = (List<Map<String,Object>>)tasksListJson.get("root");
             for(Map<String,Object> obj : list){
                 Product p = new Product();
-                float id = Float.parseFloat(obj.get("id").toString());
-                p.setId((int)id);
+             
               
                p.setName(((String)(obj.get("name").toString())));
-                 p.setDescription(((String)(obj.get("description").toString())));
-               p.setQuantity(((String)(obj.get("quantity").toString())));
+               
                p.setSize(((String)(obj.get("size").toString())));
-                 p.setColor(((String)(obj.get("color").toString())));
+            
                   p.setType(((String)(obj.get("type").toString())));
-                    p.setSupplier(((String)(obj.get("supplier").toString())));
-                     p.setImage(((String)(obj.get("image").toString())));
+                   
                  float price = Float.parseFloat(obj.get("price").toString());
                 p.setPrice((int)price);
                product.add(p);
