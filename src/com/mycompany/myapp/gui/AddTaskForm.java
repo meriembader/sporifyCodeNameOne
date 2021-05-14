@@ -20,7 +20,6 @@ import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.layouts.FlowLayout;
 import com.mycompany.myapp.entities.association;
 import com.mycompany.myapp.services.ServiceTask;
-import com.sendgrid.*;
 import java.io.IOException;
 
 /**
@@ -64,25 +63,9 @@ public class AddTaskForm extends Form{
      btnValider.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent evt) {
-               Email from = new Email("meriem.bader1@esprit.tn");
-    String subject = "Candidature LITO";
-    Email to = new Email("meriembader8@gmail.com");
-    Content content = new Content("text/plain", "merci de confirmer la candidature");
-    Mail mail = new Mail(from, subject, to, content);
 
-    SendGrid sg = new SendGrid("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");
-    Request request = new Request();
-    try {
-      request.setMethod(Method.POST);
-      request.setEndpoint("mail/send");
-      request.setBody(mail.build());
-      Response response = sg.api(request);
-      System.out.println(response.getStatusCode());
-      System.out.println(response.getBody());
-      System.out.println(response.getHeaders());
-    } catch (IOException ex) {
     System.out.println("message non envoyé");
-    }
+    
             }
         });
         

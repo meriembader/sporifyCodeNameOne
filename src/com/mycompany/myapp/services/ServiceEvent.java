@@ -74,7 +74,7 @@ public class ServiceEvent {
                 Event e = new Event();
                 float id = Float.parseFloat(obj.get("id").toString());
                 e.setId((int)id);
-              
+                e.setTitre(((String)(obj.get("titre").toString())));
                  e.setDescription(((String)(obj.get("description").toString())));
                   
                      e.setImage(((String)(obj.get("image").toString())));
