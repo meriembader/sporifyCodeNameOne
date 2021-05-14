@@ -106,4 +106,35 @@ public class ServiceProduct {
         NetworkManager.getInstance().addToQueueAndWait(req);
         return product;
     }
+    
+    
+    
+    public ArrayList<Product> parseProdcutDetail(String jsonText){
+        try {
+            product =new ArrayList<>();
+            JSONParser j = new JSONParser();
+            Map<String,Object> tasksListJson = j.parseJSON(new CharArrayReader(jsonText.toCharArray()));
+            
+            List<Map<String,Object>> list = (List<Map<String,Object>>)tasksListJson.get("root");
+            for(Map<String,Object> obj : list){
+                Product p = new Product();
+             
+              
+               p.setName(((String)(obj.get("name").toString())));
+               
+               p.setSize(((String)(obj.get("size").toString())));
+            
+                  p.setType(((String)(obj.get("type").toString())));
+                   
+                 float price = Float.parseFloat(obj.get("price").toString());
+                p.setPrice((int)price);
+               product.add(p);
+            }
+            
+            
+        } catch (IOException ex) {
+            
+        }
+        return product;
+    }
 }
