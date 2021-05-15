@@ -108,4 +108,11 @@ public class ServiceCaart {
         NetworkManager.getInstance().addToQueueAndWait(req);
         return carts;
     }
+    public Boolean addnewcart(int id,int idprod,int quant){
+        String url = Statics.BASE_URL+"/espritApi/commander"+id+"/"+idprod+"/"+quant;
+        req.setUrl(url);
+        req.setPost(false);
+        NetworkManager.getInstance().addToQueueAndWait(req);
+        return true;
+    }
 }
