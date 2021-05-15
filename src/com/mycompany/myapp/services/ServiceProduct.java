@@ -121,17 +121,20 @@ public class ServiceProduct {
                p.setColor(((String)(obj.get("color").toString())));
                p.setDescription(((String)(obj.get("description").toString())));
                p.setSize(((String)(obj.get("size").toString())));
+
+    
                   p.setType(((String)(obj.get("type").toString())));
                    
                  float price = Float.parseFloat(obj.get("price").toString());
                 p.setPrice((int)price);
-  
+
             }
             
             
         } catch (IOException ex) {
             
         }
+
         return p;
     }
     public Product getOneProduct(String jsonText,int idprod){
@@ -147,5 +150,6 @@ public class ServiceProduct {
         });
         NetworkManager.getInstance().addToQueueAndWait(req);
         return prod;
+
     }
 }
