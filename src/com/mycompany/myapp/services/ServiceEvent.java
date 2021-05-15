@@ -15,10 +15,10 @@ import com.codename1.ui.events.ActionListener;
 import com.mycompany.myapp.entities.Event;
 import com.mycompany.myapp.entities.association;
 
-import com.mycompany.myapp.entities.Product;
 import com.mycompany.myapp.utils.Statics;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -63,7 +63,7 @@ public class ServiceEvent {
         return resultOK;
     }
     */
-    public ArrayList<Event> parseProdcut(String jsonText){
+    public ArrayList<Event> parseEvent(String jsonText){
         try {
             event =new ArrayList<>();
             JSONParser j = new JSONParser();
@@ -79,7 +79,10 @@ public class ServiceEvent {
                   
                      e.setImage(((String)(obj.get("image").toString())));
                        e.setLocation(((String)(obj.get("location").toString())));
-               
+               e.setDebut(((String)(obj.get("date_debut").toString())).substring(0, 16));
+               e.setFin(((String)(obj.get("date_fin").toString())).substring(0, 16));
+                System.out.println(e);
+
                event.add(e);
             }
             
@@ -97,7 +100,7 @@ public class ServiceEvent {
         req.addResponseListener(new ActionListener<NetworkEvent>() {
             @Override
             public void actionPerformed(NetworkEvent evt) {
-                event = parseProdcut(new String(req.getResponseData()));
+                event = parseEvent(new String(req.getResponseData()));
                 req.removeResponseListener(this);
             }
         });
