@@ -71,8 +71,8 @@ public class ProfileForm extends SideMenuBaseForm {
                         FlowLayout.encloseIn(menuButton),
                         BorderLayout.centerAbsolute(
                                 BoxLayout.encloseY(
-                                    new Label("Lito", "Title"),
-                                    new Label("Why we can't we live together", "SubTitle")
+                                    new Label("Sporify", "Title"),
+                                    new Label("Esprit", "SubTitle")
                                 )
                             ).add(BorderLayout.WEST, profilePicLabel),
                         GridLayout.encloseIn(2, remainingTasks, completedTasks)
@@ -87,9 +87,9 @@ public class ProfileForm extends SideMenuBaseForm {
         
         FontImage arrowDown = FontImage.createMaterial(FontImage.MATERIAL_KEYBOARD_ARROW_DOWN, "Label", 3);
         
-        addButtonBottom(arrowDown, "Donnation", 0xd997f1, true);
-        addButtonBottom(arrowDown, " Sante", 0x5ae29d, false);
-        addButtonBottom(arrowDown, "Habite", 0x4dc2ff, false);
+        addButtonBottom(arrowDown, "Sport", 0xd997f1, true);
+        addButtonBottom(arrowDown, " Marketing", 0x5ae29d, false);
+        addButtonBottom(arrowDown, "Vente", 0x4dc2ff, false);
         addButtonBottom(arrowDown, "Education", 0xffc06f, false);
         addButtonBottom(arrowDown, " Emploi", 0x5ae29d, false);
         
