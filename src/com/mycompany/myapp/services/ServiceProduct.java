@@ -23,7 +23,7 @@ import java.util.Map;
 
 /**
  *
- * @author bhk
+ * @author Meriem
  */
 public class ServiceProduct {
 

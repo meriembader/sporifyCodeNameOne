@@ -24,7 +24,7 @@ import com.mycompany.myapp.services.ServiceCaart;
 import com.mycompany.myapp.gui.CartForm;
 /**
  *
- * @author Ahmed Shil
+ * @author Meriem
  */
 public class DetailProductForm extends Form {
      public DetailProductForm(Product prod,Form previous) {
