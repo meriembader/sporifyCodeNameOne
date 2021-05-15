@@ -12,6 +12,8 @@ import com.codename1.ui.Container;
 import com.codename1.ui.FontImage;
 import com.codename1.ui.Form;
 import com.codename1.ui.Label;
+import com.codename1.ui.events.ActionEvent;
+import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.util.Resources;
@@ -38,6 +40,13 @@ public class ListProductForm extends Form{
      for(Product prod :ServiceProduct.getInstance().getAllProducts()){
          MultiButton mb = new MultiButton(prod.getName()+" "+prod.getPrice()+"$");
          mb.setTextLine2("Commander maintenant");
+         mb.addActionListener(new ActionListener(){
+             @Override
+             public void actionPerformed(ActionEvent evt) {
+             DetailProductForm DPF =new DetailProductForm(prod,previous);
+             DPF.show();
+             }
+         });
          cnt.add(mb);
      }
      add(cnt);

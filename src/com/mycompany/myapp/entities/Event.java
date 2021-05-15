@@ -15,24 +15,31 @@ public class Event {
     String description;
     String image;
     String location;
-  
+    String debut;
+    String fin;
 
     public Event() {}
 
-    public Event(int id, String titre, String description, String image, String location) {
+    public Event(int id, String titre, String description, String image, String location, String debut, String fin) {
         this.id = id;
         this.titre = titre;
         this.description = description;
         this.image = image;
         this.location = location;
+        this.debut = debut;
+        this.fin = fin;
     }
 
-    public Event(String titre, String description, String image, String location) {
+    public Event(String titre, String description, String image, String location, String debut, String fin) {
         this.titre = titre;
         this.description = description;
         this.image = image;
         this.location = location;
+        this.debut = debut;
+        this.fin = fin;
     }
+
+    
 
     public int getId() {
         return id;
@@ -74,10 +81,29 @@ public class Event {
         this.location = location;
     }
 
+    public String getDebut() {
+        return debut;
+    }
+
+    public void setDebut(String debut) {
+        this.debut = debut;
+    }
+
+    public String getFin() {
+        return fin;
+    }
+
+    public void setFin(String fin) {
+        this.fin = fin;
+    }
+
+
     @Override
     public String toString() {
-        return "Event{" + "id=" + id + ", titre=" + titre + ", description=" + description + ", image=" + image + ", location=" + location + '}';
+        return "Event{" + "id=" + id + ", titre=" + titre + ", description=" + description + ", image=" + image + ", location=" + location + ", debut=" + debut + ", fin=" + fin + '}';
     }
+
+ 
     
 
 }

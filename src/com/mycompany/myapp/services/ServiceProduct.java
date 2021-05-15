@@ -29,7 +29,7 @@ public class ServiceProduct {
 
  
     public ArrayList<Product> product;
-    
+    public Product prod;
     public static ServiceProduct instance=null;
     public boolean resultOK;
     private ConnectionRequest req;
@@ -67,7 +67,6 @@ public class ServiceProduct {
             product =new ArrayList<>();
             JSONParser j = new JSONParser();
             Map<String,Object> tasksListJson = j.parseJSON(new CharArrayReader(jsonText.toCharArray()));
-            
             List<Map<String,Object>> list = (List<Map<String,Object>>)tasksListJson.get("root");
             for(Map<String,Object> obj : list){
                 Product p = new Product();
@@ -105,5 +104,48 @@ public class ServiceProduct {
         });
         NetworkManager.getInstance().addToQueueAndWait(req);
         return product;
+    }
+        public Product parseOneProdcut(String jsonText){
+            Product p = new Product();
+        try {
+
+            JSONParser j = new JSONParser();
+            Map<String,Object> tasksListJson = j.parseJSON(new CharArrayReader(jsonText.toCharArray()));
+            List<Map<String,Object>> list = (List<Map<String,Object>>)tasksListJson.get("root");
+            for(Map<String,Object> obj : list){
+                
+               float id=Float.parseFloat(obj.get("id").toString());
+               
+               p.setId(((int)id));
+               p.setName(((String)(obj.get("name").toString())));
+               p.setColor(((String)(obj.get("color").toString())));
+               p.setDescription(((String)(obj.get("description").toString())));
+               p.setSize(((String)(obj.get("size").toString())));
+                  p.setType(((String)(obj.get("type").toString())));
+                   
+                 float price = Float.parseFloat(obj.get("price").toString());
+                p.setPrice((int)price);
+  
+            }
+            
+            
+        } catch (IOException ex) {
+            
+        }
+        return p;
+    }
+    public Product getOneProduct(String jsonText,int idprod){
+         String url = Statics.BASE_URL+"/product/detail/"+idprod;
+        req.setUrl(url);
+        req.setPost(false);
+        req.addResponseListener(new ActionListener<NetworkEvent>() {
+            @Override
+            public void actionPerformed(NetworkEvent evt) {
+                prod = parseOneProdcut(new String(req.getResponseData()));
+                req.removeResponseListener(this);
+            }
+        });
+        NetworkManager.getInstance().addToQueueAndWait(req);
+        return prod;
     }
 }
