@@ -38,7 +38,7 @@ import com.codename1.ui.util.Resources;
 /**
  * Represents a user profile in the app, the first form we open after the walkthru
  *
- * @author Shai Almog
+ * @author Meriem
  */
 public class ProfileForm extends SideMenuBaseForm {
     public ProfileForm(Resources res) {

@@ -17,7 +17,7 @@ import com.mycompany.myapp.entities.Product;
 
 /**
  *
- * @author Ahmed Shil
+ * @author Meriem
  */
 public class DetailEventForm extends Form {
      public DetailEventForm(Event ev,Form previous) {
