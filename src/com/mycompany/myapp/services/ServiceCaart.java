@@ -14,7 +14,7 @@ import com.codename1.ui.events.ActionListener;
 import com.mycompany.myapp.entities.Cart;
 import com.mycompany.myapp.entities.Promotion;
 
-import com.mycompany.myapp.entities.association;
+
 import com.mycompany.myapp.utils.Statics;
 import java.io.IOException;
 import java.util.ArrayList;

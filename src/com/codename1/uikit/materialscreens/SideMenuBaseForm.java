@@ -28,14 +28,12 @@ import com.codename1.ui.Label;
 import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.Layout;
 import com.codename1.ui.util.Resources;
-//import com.mycompany.myapp.gui.AddBenevoleForm;
-import com.mycompany.myapp.gui.AddTaskForm;
+
+
 import com.mycompany.myapp.gui.ListEventForm;
 import com.mycompany.myapp.gui.ListProductForm;
 import com.mycompany.myapp.gui.ListPromotionForm;
 
-import com.mycompany.myapp.gui.LoginTaskForm;
-//import com.mycompany.myapp.gui.RegisterForm;
 
 
 
@@ -68,21 +66,19 @@ Form current;
         Image mask = res.getImage("round-mask.png");
         mask = mask.scaledHeight(mask.getHeight() / 4 * 3);
         profilePic = profilePic.fill(mask.getWidth(), mask.getHeight());
-        Label profilePicLabel = new Label("LITO: Why we can't we live together", profilePic, "SideMenuTitle");
+        Label profilePicLabel = new Label("Sporify", profilePic, "SideMenuTitle");
         profilePicLabel.setMask(mask.createMask());
 
         Container sidemenuTop = BorderLayout.center(profilePicLabel);
         sidemenuTop.setUIID("SidemenuTop");
         
         getToolbar().addComponentToSideMenu(sidemenuTop);
-      //  getToolbar().addMaterialCommandToSideMenu("Register", FontImage.MATERIAL_AC_UNIT, e-> new RegisterForm(this).show());
-         getToolbar().addMaterialCommandToSideMenu("Se connecter", FontImage.MATERIAL_AC_UNIT, e-> new LoginForm(res).show());
+   
             getToolbar().addMaterialCommandToSideMenu("list Produit", FontImage.MATERIAL_AC_UNIT, e-> new ListProductForm(this).show());
               getToolbar().addMaterialCommandToSideMenu("list Event", FontImage.MATERIAL_AC_UNIT, e-> new ListEventForm(this).show());
               getToolbar().addMaterialCommandToSideMenu("Promotions", FontImage.MATERIAL_AC_UNIT, e-> new ListPromotionForm(this).show());
-       // getToolbar().addMaterialCommandToSideMenu(" Benevole", FontImage.MATERIAL_TRENDING_UP, e ->new AddBenevoleForm(this).show());
-        getToolbar().addMaterialCommandToSideMenu("  Association", FontImage.MATERIAL_ACCESS_TIME,  e ->new AddTaskForm(this).show());
-        getToolbar().addMaterialCommandToSideMenu("  Logout", FontImage.MATERIAL_EXIT_TO_APP,  e -> new LoginForm(res).show());
+      
+     
     }
     
     protected abstract void showOtherForm(Resources res);
