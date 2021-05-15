@@ -8,6 +8,7 @@
             <file>file:/C:/Users/Meriem/Documents/NetBeansProjects/Bras_FortMobile/src/com/mycompany/myapp/gui/AddBenevoleForm.java</file>
             <file>file:/C:/Users/Meriem/Documents/NetBeansProjects/Bras_FortMobile/src/com/mycompany/myapp/services/ServiceUser.java</file>
             <file>file:/C:/Users/Meriem/Documents/NetBeansProjects/Bras_FortMobile/src/com/mycompany/myapp/gui/HomeForm.java</file>
+            <file>file:/C:/Users/Meriem/Documents/NetBeansProjects/Bras_FortMobile/src/com/mycompany/myapp/gui/BaseForm.java</file>
             <file>file:/C:/Users/Meriem/Documents/NetBeansProjects/Bras_FortMobile/src/com/codename1/uikit/materialscreens/LoginForm1.java</file>
             <file>file:/C:/Users/Meriem/Documents/NetBeansProjects/Bras_FortMobile/src/com/mycompany/myapp/gui/ListTasksForm.java</file>
             <file>file:/C:/Users/Meriem/Documents/NetBeansProjects/Bras_FortMobile/src/com/mycompany/myapp/services/ServiceTask.java</file>
@@ -15,11 +16,12 @@
             <file>file:/C:/Users/Meriem/Documents/NetBeansProjects/Bras_FortMobile/src/com/mycompany/myapp/gui/AddTaskForm.java</file>
             <file>file:/C:/Users/Meriem/Documents/NetBeansProjects/Bras_FortMobile/src/com/mycompany/myapp/utils/Statics.java</file>
             <file>file:/C:/Users/Meriem/Documents/NetBeansProjects/Bras_FortMobile/src/com/codename1/uikit/materialscreens/WalkthruForm.java</file>
+            <file>file:/C:/Users/Meriem/Documents/NetBeansProjects/Bras_FortMobile/src/com/mycompany/myapp/gui/DetailEventForm.java</file>
+            <file>file:/C:/Users/Meriem/Documents/NetBeansProjects/Bras_FortMobile/src/com/mycompany/myapp/gui/ListEventForm.java</file>
             <file>file:/C:/Users/Meriem/Documents/NetBeansProjects/Bras_FortMobile/src/com/codename1/uikit/materialscreens/ProfileForm.java</file>
             <file>file:/C:/Users/Meriem/Documents/NetBeansProjects/Bras_FortMobile/src/com/codename1/uikit/materialscreens/SideMenuBaseForm.java</file>
             <file>file:/C:/Users/Meriem/Documents/NetBeansProjects/Bras_FortMobile/src/com/mycompany/myapp/services/IntService.java</file>
             <file>file:/C:/Users/Meriem/Documents/NetBeansProjects/Bras_FortMobile/src/com/mycompany/myapp/gui/LoginTaskForm.java</file>
-            <file>file:/C:/Users/Meriem/Documents/NetBeansProjects/Bras_FortMobile/src/com/mycompany/myapp/services/ServiceBenevole.java</file>
         </group>
     </open-files>
 </project-private>

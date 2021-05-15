@@ -77,7 +77,7 @@ Form current;
       //  getToolbar().addMaterialCommandToSideMenu("Register", FontImage.MATERIAL_AC_UNIT, e-> new RegisterForm(this).show());
          getToolbar().addMaterialCommandToSideMenu("Se connecter", FontImage.MATERIAL_AC_UNIT, e-> new LoginForm(res).show());
             getToolbar().addMaterialCommandToSideMenu("list Produit", FontImage.MATERIAL_AC_UNIT, e-> new ListProductForm(this).show());
-              getToolbar().addMaterialCommandToSideMenu("list Event", FontImage.MATERIAL_AC_UNIT, e-> new ListEventForm(this).show());
+            //  getToolbar().addMaterialCommandToSideMenu("list Event", FontImage.MATERIAL_AC_UNIT, e-> new ListEventForm(this).show());
        // getToolbar().addMaterialCommandToSideMenu(" Benevole", FontImage.MATERIAL_TRENDING_UP, e ->new AddBenevoleForm(this).show());
         getToolbar().addMaterialCommandToSideMenu("  Association", FontImage.MATERIAL_ACCESS_TIME,  e ->new AddTaskForm(this).show());
         getToolbar().addMaterialCommandToSideMenu("  Logout", FontImage.MATERIAL_EXIT_TO_APP,  e -> new LoginForm(res).show());
