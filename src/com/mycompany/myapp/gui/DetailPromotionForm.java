@@ -21,38 +21,31 @@ import com.mycompany.myapp.services.ServiceCaart;
 import com.mycompany.myapp.gui.CartForm;
 /**
  *
- * @author Ahmed Shil
+ * @author Meriem 
  */
-public class DetailProductForm extends Form {
-     public DetailProductForm(Product prod,Form previous) {
+public class DetailPromotionForm extends Form {
+     public DetailPromotionForm(Promotion promo,Form previous) {
          Container cnt = new Container(new BoxLayout(BoxLayout.Y_AXIS));
-         Label name = new Label("Nom produit : "+prod.getName());
-Label color = new Label("Couleur : "+prod.getColor());
-SpanLabel  description = new SpanLabel ("Description : "+prod.getDescription());
-Label size = new Label("Taille : "+prod.getSize());
-Label type = new Label("Type : "+prod.getType());
-Label price = new Label("Prix : "+String.valueOf(prod.getPrice()));
-         Button cmd= new Button("Commander");
+         Label titre = new Label("titre : "+promo.getTitre());
+Label pourcentage = new Label("pourcentage : "+promo.getPourcentage());
+SpanLabel  description = new SpanLabel ("Description : "+promo.getDescription());
+Label typeProduit = new Label("typeProduit : "+promo.getTypeProduit());
+Label date_debut = new Label("date_debut : "+promo.getDate_debut());
+Label date_fin = new Label("date_fin : "+String.valueOf(promo.getDate_fin()));
          
-         cmd.setAlignment(CENTER);
-         cmd.addActionListener(new ActionListener(){
-             @Override
-             public void actionPerformed(ActionEvent evt) {
-             DetailEventForm DEF =new DetailEventForm(prod,previous);
-             DEF.show();
-             }
-         });
-         Button btnValider = new Button("checkout");
+         
+       
+        
         
 
-cnt.add(name);
+cnt.add(titre);
 cnt.add(description);
-cnt.add(size);
-cnt.add(color);
-cnt.add(type);
-cnt.add(price);
+cnt.add(pourcentage);
+cnt.add(typeProduit);
+cnt.add(date_debut);
+cnt.add(date_fin);
 
-addAll(cnt,btnValider);
+addAll(cnt);
 
 getToolbar().addMaterialCommandToLeftBar("", FontImage.MATERIAL_ARROW_BACK, e-> previous.show());
      }
